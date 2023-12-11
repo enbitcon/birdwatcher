@@ -85,13 +85,9 @@ endif
 
 
 release: linux
-
-	mkdir -p ../birdseye-static/birdwatcher-builds/$(APP_VERSION)/
-	cp birdwatcher-linux-amd64 ../birdseye-static/birdwatcher-builds/$(APP_VERSION)/
-	rm -f ../birdseye-static/birdwatcher-builds/latest
-	cd ../birdseye-static/birdwatcher-builds && ln -s $(APP_VERSION) latest
-
-
+    mkdir -p dist
+	mv birdwatcher-linux-amd64 dist/birdwatcher-linux-amd64-$(APP_VERSION)
+	
 rpm: dist
 
 	# Clear tmp failed build (if any)
