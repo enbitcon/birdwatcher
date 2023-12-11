@@ -85,7 +85,7 @@ endif
 
 
 release: linux
-    mkdir -p dist
+	mkdir -p dist
 	mv birdwatcher-linux-amd64 dist/birdwatcher-linux-amd64-$(APP_VERSION)
 	
 rpm: dist
